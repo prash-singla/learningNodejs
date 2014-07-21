@@ -46,11 +46,22 @@ if (env === 'production') {
  * Routes
  */
 
+
+app.get('/', routes.index);
+app.get('/partials/:name', routes.partials);
+
 // serve index and view partials
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
 // JSON API
+app.get('/api/posts', api.posts);
+app.get('/api/post/:id', api.post);
+app.post('/api/post', api.addPost);
+app.put('/api/post/:id', api.editPost);
+app.delete('/api/post/:id', api.deletePost);
+
+
 app.get('/api/name', api.name);
 
 // redirect all others to the index (HTML5 history)
