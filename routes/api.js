@@ -1,7 +1,7 @@
 /*
  * Serve JSON to our AngularJS client
  */
- 
+
 
 // initialize our faux database
 var data = {
@@ -47,6 +47,7 @@ exports.post = function (req, res) {
 // POST
 exports.addPost = function (req, res) {
   data.posts.push(req.body);
+  console.log(data);
   res.json(req.body);
 };
 
