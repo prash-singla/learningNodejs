@@ -46,10 +46,6 @@ if (env === 'production') {
  * Routes
  */
 
-
-app.get('/', routes.index);
-app.get('/partials/:name', routes.partials);
-
 // serve index and view partials
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
@@ -61,8 +57,6 @@ app.post('/api/post', api.addPost);
 app.put('/api/post/:id', api.editPost);
 app.delete('/api/post/:id', api.deletePost);
 
-
-app.get('/api/name', api.name);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
