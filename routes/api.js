@@ -1,8 +1,9 @@
 /*
  * Serve JSON to our AngularJS client
  */
+ 
 
- // initialize our faux database
+// initialize our faux database
 var data = {
   "posts": [
     {
